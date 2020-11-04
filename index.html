@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome To Vue Jees</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 5%;
+        font-family: "QuickSand", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <img src="/image/logos.png" width="80" />
+        <h1>Apa Itu Vue Jees?</h1>
+        <p>Vue Jees Merupakan Salah Satu FrameWok JavaScript</p>
+      </header>
+
+      <footer id="footer">
+        <p>copyright 2020</p>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+      const vm = new Vue({
+        // Ini merupakan cara bagaimana kita membuat object di dalam Vue secara global di masukan ke dalam variabel
+        el: "#app", // ini adalah key dan value di Vue key = el , value nya = string Id #app
+      });
+    </script>
+  </body>
+</html>
