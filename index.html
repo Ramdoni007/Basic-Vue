@@ -30,9 +30,21 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script>
+      // Contoh penulisan data di dalam Vue ketika di masukan ke dalam Variable
+      const member = {
+        // Isi Bisa : Strin , Boolean , array , object
+        name: "Ramdoni Ganteng",
+        message: "Hai Doni Ganteng !!!",
+      };
       const vm = new Vue({
         // Ini merupakan cara bagaimana kita membuat object di dalam Vue secara global di masukan ke dalam variabel
         el: "#app", // ini adalah key dan value di Vue key = el , value nya = string Id #app
+        // Penulisan Data di satu Variable
+        data: member,
+        data2: {
+          name: "Jeon Jungkook",
+          message: "Mirip Banget Ama Si Doni",
+        },
       });
     </script>
   </body>
