@@ -20,7 +20,7 @@
     <div id="app">
       <header>
         <img src="/image/logos.png" width="80" />
-        <h1>Apa Itu Vue Jees?</h1>
+        <h1>Vue Jees Apaan Yee?</h1>
         <p>Vue Jees Merupakan Salah Satu FrameWok JavaScript</p>
       </header>
 
@@ -35,16 +35,16 @@
         // Isi Bisa : Strin , Boolean , array , object
         name: "Ramdoni Ganteng",
         message: "Hai Doni Ganteng !!!",
+        address: {
+          city: "Bogor",
+          zip: 007007,
+        },
       };
       const vm = new Vue({
         // Ini merupakan cara bagaimana kita membuat object di dalam Vue secara global di masukan ke dalam variabel
         el: "#app", // ini adalah key dan value di Vue key = el , value nya = string Id #app
         // Penulisan Data di satu Variable
         data: member,
-        data2: {
-          name: "Jeon Jungkook",
-          message: "Mirip Banget Ama Si Doni",
-        },
       });
     </script>
   </body>
