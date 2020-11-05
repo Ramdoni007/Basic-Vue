@@ -20,7 +20,7 @@
     <div id="app">
       <header>
         <img src="/image/logos.png" width="80" />
-        <h1>{{getname()}}</h1>
+        <h1>{{namaLengkap}}</h1>
         <p>Vue Jees Merupakan Salah Satu FrameWok JavaScript</p>
       </header>
 
@@ -40,6 +40,9 @@
           zip: 007007,
         },
         isactive: true,
+        qty: 3,
+        namaDepan: "Ramdoni",
+        namaBelakang: "Istri Rem:",
       };
       const vm = new Vue({
         // Ini merupakan cara bagaimana kita membuat object di dalam Vue secara global di masukan ke dalam variabel
@@ -53,6 +56,17 @@
           ubahNama: function (namaBaru) {
             this.name = namaBaru;
             this.getname(); // fungsi ubahNama Memanggil Fungsi getName
+          },
+        },
+        computed: {
+          // computed adalah melakukan perhitungan dalam suatu project application jika sudah masuk kedalam vue project
+          totalBayar: function () {
+            // Ini mengembalikan total Bayar yang data nya di ambil dari qty data
+            return this.qty * 4500;
+          },
+          namaLengkap: function () {
+            // ini mengembalikan namaLengkap yang data nya di ambil dari data namaDepan And Belakang
+            return this.namaDepan + this.namaBelakang;
           },
         },
       });
