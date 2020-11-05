@@ -20,7 +20,7 @@
     <div id="app">
       <header>
         <img src="/image/logos.png" width="80" />
-        <h1>{{isactive ? 'Betul' : 'Gagal'}}</h1>
+        <h1>{{getname()}}</h1>
         <p>Vue Jees Merupakan Salah Satu FrameWok JavaScript</p>
       </header>
 
@@ -46,6 +46,11 @@
         el: "#app", // ini adalah key dan value di Vue key = el , value nya = string Id #app
         // Penulisan Data di satu Variable
         data: member,
+        methods: {
+          getname: function () {
+            return "Coba Sapa!!!! Hallo : " + " " + this.name;
+          },
+        },
       });
     </script>
   </body>
