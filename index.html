@@ -20,7 +20,7 @@
     <div id="app">
       <header>
         <img src="/image/logos.png" width="80" />
-        <h1>{{name}}</h1>
+        <h1>{{isactive ? 'Betul' : 'Gagal'}}</h1>
         <p>Vue Jees Merupakan Salah Satu FrameWok JavaScript</p>
       </header>
 
@@ -39,6 +39,7 @@
           city: "Bogor",
           zip: 007007,
         },
+        isactive: true,
       };
       const vm = new Vue({
         // Ini merupakan cara bagaimana kita membuat object di dalam Vue secara global di masukan ke dalam variabel
