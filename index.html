@@ -22,6 +22,8 @@
         <img src="/image/logos.png" width="80" />
         <h1>{{bilangan}}</h1>
         <p>Bilangan Ini adala Bilangan: {{cekBilangan}}</p>
+        <p v-text="namaDepan"></p>
+        <!--Ini merupakan contoh daru Directive dalam vue jees-->
         <p>Vue Jees Merupakan Salah Satu FrameWok JavaScript</p>
       </header>
 
@@ -44,7 +46,7 @@
         qty: 3,
         namaDepan: "Ramdoni",
         namaBelakang: "Istri Rem:",
-        bilangan: 10,
+        bilangan: 109,
       };
       const vm = new Vue({
         // Ini merupakan cara bagaimana kita membuat object di dalam Vue secara global di masukan ke dalam variabel
