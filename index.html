@@ -50,6 +50,10 @@
           getname: function () {
             return "Coba Sapa!!!! Hallo : " + " " + this.name;
           },
+          ubahNama: function (namaBaru) {
+            this.name = namaBaru;
+            this.getname(); // fungsi ubahNama Memanggil Fungsi getName
+          },
         },
       });
     </script>
