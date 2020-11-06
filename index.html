@@ -14,6 +14,11 @@
         margin: 5%;
         font-family: "QuickSand", sans-serif;
       }
+      .active {
+        background: powderblue;
+        padding: 5px;
+        border: 0;
+      }
     </style>
   </head>
   <body>
@@ -24,6 +29,7 @@
         <p>Bilangan Ini adala Bilangan: {{cekBilangan}}</p>
         <p>
           <button @click="handleClick">Kelik Disini</button>
+          <!--Ini merupakan contoh dari Event di dalam Vue jees @click-->
         </p>
         <p v-text="bilangan*5"></p>
         <img :src="gambar" alt="500" />
@@ -31,6 +37,9 @@
         <!--Ini merupakan contoh dari directive Binding-->
         <!--Ini merupakan contoh daru Directive dalam vue jees-->
         <p>Vue Jees Merupakan Salah Satu FrameWok JavaScript</p>
+        <button class="active">Home</button>
+        <button>About</button>
+        <button>Blog</button>
       </header>
 
       <footer id="footer">
