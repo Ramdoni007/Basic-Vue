@@ -23,6 +23,8 @@
         <h1>{{bilangan}}</h1>
         <p>Bilangan Ini adala Bilangan: {{cekBilangan}}</p>
         <p v-text="bilangan*5"></p>
+        <img :src="gambar" alt="500" />
+        <!--contoh dari attribute binding menggunakan image-->
         <!--Ini merupakan contoh dari directive Binding-->
         <!--Ini merupakan contoh daru Directive dalam vue jees-->
         <p>Vue Jees Merupakan Salah Satu FrameWok JavaScript</p>
@@ -48,6 +50,7 @@
         namaDepan: "Ramdoni",
         namaBelakang: "Istri Rem:",
         bilangan: 10,
+        gambar: "/image/Rem.jpeg", // Ini merupakan contoh dari data image yang kita binding attribute
       };
       const vm = new Vue({
         // Ini merupakan cara bagaimana kita membuat object di dalam Vue secara global di masukan ke dalam variabel
