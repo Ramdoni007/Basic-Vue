@@ -25,13 +25,44 @@
     <div id="app">
       <header>
         <img src="/image/logos.png" width="80" />
-        <h1>{{bilangan}}</h1>
+        <h1>{{name}}</h1>
+        <p><input type="text" v-model="name" /></p>
+        <p>{{kelas}}</p>
+        <div>
+          <label
+            ><input type="checkbox" value="Rem" v-model="kelas" />Rem</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              value="Emilia"
+              v-model="kelas"
+            />Emilia</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              value="Itsuki"
+              v-model="kelas"
+            />Itsuki</label
+          >
+          <label
+            ><input type="checkbox" value="Miku" v-model="kelas" />Miku</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              value="Ichika"
+              v-model="kelas"
+            />Ichika</label
+          >
+        </div>
         <p>Bilangan Ini adala Bilangan: {{cekBilangan}}</p>
         <p>
           <button @click="handleClick">Kelik Disini</button>
           <!--Ini merupakan contoh dari Event di dalam Vue jees @click-->
         </p>
-        <p v-text="bilangan*5"></p>
+        <!-- <p v-text="bilangan*5"></p> -->
         <img :src="gambar" alt="500" />
         <!--contoh dari attribute binding menggunakan image-->
         <!--Ini merupakan contoh dari directive Binding-->
@@ -79,6 +110,7 @@
         bilangan: 1,
         gambar: "/image/Rem.jpeg", // Ini merupakan contoh dari data image yang kita binding attribute
         menu: "home",
+        kelas: [],
       };
       const vm = new Vue({
         // Ini merupakan cara bagaimana kita membuat object di dalam Vue secara global di masukan ke dalam variabel
@@ -96,6 +128,9 @@
           handleClick: function () {
             this.bilangan++;
             this.gambar = "image/Emilia.jpeg";
+            // this.gambar = "image/Itsuki.jpg";
+            // this.gambar = "image/Miku.jpeg";
+            // this.gambar = "image/Ichika.jpeg";
           },
         },
         computed: {
