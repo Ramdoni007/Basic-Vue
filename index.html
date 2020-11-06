@@ -22,6 +22,9 @@
         <img src="/image/logos.png" width="80" />
         <h1>{{bilangan}}</h1>
         <p>Bilangan Ini adala Bilangan: {{cekBilangan}}</p>
+        <p>
+          <button @click="handleClick">Kelik Disini</button>
+        </p>
         <p v-text="bilangan*5"></p>
         <img :src="gambar" alt="500" />
         <!--contoh dari attribute binding menggunakan image-->
@@ -49,7 +52,7 @@
         qty: 3,
         namaDepan: "Ramdoni",
         namaBelakang: "Istri Rem:",
-        bilangan: 10,
+        bilangan: 1,
         gambar: "/image/Rem.jpeg", // Ini merupakan contoh dari data image yang kita binding attribute
       };
       const vm = new Vue({
@@ -64,6 +67,10 @@
           ubahNama: function (namaBaru) {
             this.name = namaBaru;
             this.getname(); // fungsi ubahNama Memanggil Fungsi getName
+          },
+          handleClick: function () {
+            this.bilangan++;
+            this.gambar = "image/Emilia.jpeg";
           },
         },
         computed: {
