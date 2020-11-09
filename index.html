@@ -31,9 +31,13 @@
           <li v-for="(item,index) of kelas">{{index+1}} {{item}}</li>
           <!--Ini merupakan contoh dari v-for di dalam VueJees-->
         </ul>
-        <h2>Perlangan Angka(1-5)</h2>
+        <h2>Perulangan Angka(1-5)</h2>
         <ul>
-          <li v-for="i in  5 ">{{i}}</li>
+          <li v-for="i in 5 ">{{i}}</li>
+        </ul>
+        <h2>Mencari Bilangan Genap: (1-5)</h2>
+        <ul>
+          <li v-for="x in findEvenNumber (numbers)">{{x}}</li>
         </ul>
         <p>{{kelas}}</p>
         <div>
@@ -119,6 +123,7 @@
         gambar: "/image/Rem.jpeg", // Ini merupakan contoh dari data image yang kita binding attribute
         menu: "home",
         kelas: ["Java Script", "Kotlin", "Java", "PHP", "Python"],
+        numbers: [1, 2, 3, 4, 5],
       };
       const vm = new Vue({
         // Ini merupakan cara bagaimana kita membuat object di dalam Vue secara global di masukan ke dalam variabel
@@ -139,6 +144,11 @@
             // this.gambar = "image/Itsuki.jpg";
             // this.gambar = "image/Miku.jpeg";
             // this.gambar = "image/Ichika.jpeg";
+          },
+          findEvenNumber: (data) => {
+            return data.filter((angka) => {
+              return angka % 2 == 0;
+            });
           },
         },
         computed: {
