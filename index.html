@@ -27,6 +27,9 @@
         <img src="/image/logos.png" width="80" />
         <h1>{{name}}</h1>
         <p><input type="text" v-model="name" /></p>
+        <ul>
+          <li v-for="item of kelas" v-text="item"></li>
+        </ul>
         <p>{{kelas}}</p>
         <div>
           <label
@@ -110,7 +113,7 @@
         bilangan: 1,
         gambar: "/image/Rem.jpeg", // Ini merupakan contoh dari data image yang kita binding attribute
         menu: "home",
-        kelas: [],
+        kelas: ["Java Script", "Kotlin", "Java", "PHP", "Python"],
       };
       const vm = new Vue({
         // Ini merupakan cara bagaimana kita membuat object di dalam Vue secara global di masukan ke dalam variabel
