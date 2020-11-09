@@ -28,11 +28,12 @@
         <h1>{{name}}</h1>
         <p><input type="text" v-model="name" /></p>
         <h3>Berapakah Perulanganya? ({{kelas.length}})</h3>
-        <ul v-show="kelas.length ">
-          <li v-for="(item,index) of kelas">{{index+1}} {{item}}</li>
+        <template v-if="kelas.length">
+           <li v-for="(item,index) of kelas">{{index+1}} {{item}}</li>
           <!--Ini merupakan contoh dari v-for di dalam VueJees-->
         </ul>
-        <!-- <li v-else>Bahasa Belum Tersedia ya brayyyyyy!!!!</li> -->
+        <li v-else>Bahasa Belum Tersedia ya brayyyyyy!!!!</li>
+      </template>
         <h2>Perulangan Angka(1-5)</h2>
         <ul>
           <li v-for="i in 5 ">{{i}}</li>
@@ -124,7 +125,7 @@
         bilangan: 1,
         gambar: "/image/Rem.jpeg", // Ini merupakan contoh dari data image yang kita binding attribute
         menu: "home",
-        kelas: [],
+        kelas: ["Golang", "Java", "Kotlin", "PHP"],
         numbers: [1, 2, 3, 4, 5],
       };
       const vm = new Vue({
