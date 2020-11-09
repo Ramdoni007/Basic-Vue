@@ -28,7 +28,12 @@
         <h1>{{name}}</h1>
         <p><input type="text" v-model="name" /></p>
         <ul>
-          <li v-for="item of kelas" v-text="item"></li>
+          <li v-for="(item,index) of kelas">{{index+1}} {{item}}</li>
+          <!--Ini merupakan contoh dari v-for di dalam VueJees-->
+        </ul>
+        <h2>Perlangan Angka(1-5)</h2>
+        <ul>
+          <li v-for="i in  5 ">{{i}}</li>
         </ul>
         <p>{{kelas}}</p>
         <div>
