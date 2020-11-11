@@ -83,24 +83,24 @@
         <!--Ini merupakan contoh dari directive Binding-->
         <!--Ini merupakan contoh daru Directive dalam vue jees-->
         <p>Vue Jees Merupakan Salah Satu FrameWok JavaScript</p>
-        <button
+        <a
           v-bind:class="{active: menu === 'home'}"
-          v-on:click="menu ='home'"
+          v-on:click="gantiMenu('home', $event)"
         >
           Home
-        </button>
-        <button
-          v-bind:class="{active:menu === 'about'}"
-          v-on:click="menu = 'about'"s
+        </a>
+        <a
+          v-bind:class="{active:menu === 'about'}"href='#'
+          v-on:click="gantiMenu('about',$event)"
         >
           About
-        </button>
-        <button
-          v-bind:class="{active:menu === 'blog'}"
-          v-on:click="menu = 'blog'"
+        </a>
+        <a
+          v-bind:class="{active:menu === 'blog'}"href="#"
+          v-on:click="gantiMenu('blog', $event)"
         >
           Blog
-        </button>
+        </a>
       </header>
 
       <footer id="footer">
@@ -154,6 +154,11 @@
               return angka % 2 == 0;
             });
           },
+          gantiMenu: function (data,event) {
+            console.log(event);
+            event.preventDefault(); 
+            this.menu = data 
+          }
         },
         computed: {
           // computed adalah melakukan perhitungan dalam suatu project application jika sudah masuk kedalam vue project
@@ -169,6 +174,7 @@
             return this.bilangan % 2 == 0 ? "Genap" : "Ganjil";
           },
         },
+        
       });
     </script>
   </body>
