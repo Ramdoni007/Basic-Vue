@@ -85,19 +85,19 @@
         <p>Vue Jees Merupakan Salah Satu FrameWok JavaScript</p>
         <a
           v-bind:class="{active: menu === 'home'}"
-          v-on:click="gantiMenu('home', $event)"
+          v-on:click.prevent="gantiMenu('home')"
         >
           Home
         </a>
         <a
           v-bind:class="{active:menu === 'about'}"href='#'
-          v-on:click="gantiMenu('about',$event)"
+          v-on:click.prevent="gantiMenu('about')"
         >
           About
         </a>
         <a
           v-bind:class="{active:menu === 'blog'}"href="#"
-          v-on:click="gantiMenu('blog', $event)"
+          v-on:click.prevent="gantiMenu('blog')"
         >
           Blog
         </a>
@@ -155,8 +155,6 @@
             });
           },
           gantiMenu: function (data,event) {
-            console.log(event);
-            event.preventDefault(); 
             this.menu = data 
           }
         },
@@ -179,4 +177,6 @@
     </script>
   </body>
 </html>
+
+
 
