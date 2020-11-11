@@ -26,7 +26,8 @@
       <header>
         <img src="/image/logos.png" width="80" />
         <h1>{{name}}</h1>
-        <p><input type="text" v-model="name" /></p>
+        <h3>Form Submit</h3>
+        <p><input type="text" placeholder="Nama Kelas" v-on:keyup.enter="submit"></p>
         <h3>Berapakah Perulanganya? ({{kelas.length}})</h3>
         <template v-if="kelas.length">
            <li v-for="(item,index) of kelas">{{index+1}} {{item}}</li>
@@ -156,11 +157,16 @@
           },
           gantiMenu: function (data,event) {
             this.menu = data 
+          },
+          submit: function(event) {
+            let text =event.target.value 
+            this.kelas.unshift(text)
+            event.target.value = ""
           }
         },
         computed: {
           // computed adalah melakukan perhitungan dalam suatu project application jika sudah masuk kedalam vue project
-          totalBayar: function () {
+          totalBayar: function () {    
             // Ini mengembalikan total Bayar yang data nya di ambil dari qty data
             return this.qty * 4500;
           },
