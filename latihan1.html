@@ -62,8 +62,15 @@
         template:`<header>
         <img src="/image/logos.png" width="80" />
         <h1>{{name}}</h1>
-      <p>Vue Jees Merupakan Salah Satu FrameWok JavaScript</p>
-       </header>`
+        <pesan>{{pesan}}</pesan>
+        <p>Vue Jees Merupakan Salah Satu FrameWok JavaScript</p>
+       </header>`, 
+
+       data: function() { 
+         return  { 
+           pesan: 'Say Hai Doni!!!'
+         }
+       }
     
       })
 
