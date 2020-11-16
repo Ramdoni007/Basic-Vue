@@ -25,7 +25,7 @@
     <div id="app">
       <img :src="gambar" alt="500" />
      
-      <header-component></header-component>
+      <header-component nama="Vue Dot Jees" gambar ="image/Itsuki.jpg"></header-component>
       
     
       <main>
@@ -59,14 +59,17 @@
     <script>
 
       Vue.component('header-component', { 
+        props: ['nama' , 'gambar'] , 
         template:`<header>
         <img src="/image/logos.png" width="80" />
         <h1>{{name}}</h1>
         <pesan>{{pesan}}</pesan>
+        <img :src="gambar" width="150" >
+        <p>{{'Hai , ' +nama}}</p>
         <p>Vue Jees Merupakan Salah Satu FrameWok JavaScript</p>
-       </header>`, 
-
-       data: function() { 
+       </header>`,  
+        
+        data: function() { 
          return  { 
            pesan: 'Say Hai Doni!!!'
          }
